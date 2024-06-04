@@ -1,0 +1,29 @@
+---
+const today = new Date();
+---
+
+<footer>
+	&copy; {today.getFullYear()} The Attention Network. All rights reserved.
+</footer>
+<style>
+	footer {
+		padding: 15px;
+		background: white;
+		color: black;
+		text-align: center;
+		font-size: 15px;
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>

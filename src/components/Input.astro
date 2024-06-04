@@ -1,0 +1,32 @@
+---
+const { id, width, type, placeholder } = Astro.props;
+---
+
+<input
+	id={id}
+	type={type}
+	placeholder={placeholder}
+/>
+<style lang='scss' define:vars={{ width }}>
+	input {
+		font-family: 'Futura light';
+		background-color: var(--gray-light);
+		width: var(--width);
+		height: 40px;
+		border-radius: 5px;
+		border: 1px solid gray;
+		margin: 0;
+		margin-bottom: 10px;
+		box-shadow: none;
+		padding-left: 10px;
+		outline: none;
+		transition: border-color 0.3s;
+		&:focus {
+			border-color: var(--accent);
+		}
+		&:blur {
+			border-color: gray;
+		}
+	}
+</style>
+<script></script>

@@ -1,0 +1,57 @@
+---
+const { type, text, className, id, reverse } = Astro.props;
+---
+
+<button
+	id={id}
+	type={type}
+	class:list={[className, reverse]}
+>
+	{text}
+</button>
+
+<style lang='scss'>
+	button {
+		width: fit-content;
+		font-family: 'b3';
+		font-size: 20px;
+		font-weight: normal;
+		background-color: var(--primary);
+		color: white;
+		border: none;
+		border-radius: 5px;
+		padding: 18px 26px;
+		transition: all 0.2s ease-in-out;
+		z-index: 5;
+	}
+
+	.reverse {
+		color: var(--primary);
+		background: black;
+	}
+
+	.reverse:hover {
+		color: black;
+		background: var(--primary);
+	}
+
+	button:hover {
+		background-color: black;
+		/* font-size: 30px; */
+		color: var(--primary);
+		/* padding      : 19px 27px; */
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+	}
+</style>
+
+<script is:inline>
+const closeButton = document.querySelector('#close-button');
+
+// closeButton.style.backgroundColor = "white";
+closeButton.style.position = 'absolute';
+closeButton.style.right = '28px';
+closeButton.style.top = '28px';
+closeButton.style.padding = '10px';
+closeButton.style.borderRadius = '2px';
+</script>

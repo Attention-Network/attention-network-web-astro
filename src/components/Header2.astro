@@ -1,0 +1,117 @@
+---
+
+---
+
+<header>
+	<nav class='navbar'>
+		<a
+			class='logo'
+			href='/'
+			><img src='/logo.png' /></a
+		>
+		<div class='internal-links'>
+			<ul class='menu'>
+				<li class='menu-item'>
+					<a href='#'>About us</a>
+				</li>
+				<li class='menu-item'>
+					<a href='#'>Community</a>
+					<ul class='submenu'>
+						<li><a href='#'>Events</a></li>
+						<li><a href='#'>Careers</a></li>
+						<li><a href='#'>Partners</a></li>
+						<li><a href='#'>Members (coming soon)</a></li>
+					</ul>
+				</li>
+				<li class='menu-item'>
+					<a href='#'>Community studio</a>
+					<ul class='submenu'>
+						<li><a href='#'>Day Pass</a></li>
+						<li><a href='#'>Café</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		position: relative;
+		margin: 0;
+		padding: 0 1em;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		font-weight: lighter;
+		/* margin-bottom: 50px; */
+		padding: 20px 0;
+		z-index: 1;
+	}
+	img {
+		height: 40px;
+		margin-top: 10px;
+	}
+	.navbar {
+		/* background: #333; */
+		color: black;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 18px;
+		max-width: 1100px;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+	}
+
+	.menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+	}
+
+	.menu-item {
+		position: relative;
+		margin-right: 20px;
+	}
+
+	.menu-item a {
+		display: block;
+		padding: 10px;
+		color: black;
+		text-decoration: none;
+	}
+
+	.submenu {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		background: var(--primary);
+		list-style: none;
+		padding: 0;
+		z-index: 3;
+		transition:
+			opacity 0.5s,
+			visibility 0.5s;
+	}
+
+	.submenu li a {
+		padding: 10px;
+		color: white;
+	}
+
+	.menu-item:hover > .submenu {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.menu-item:hover ~ header {
+		z-index: 2;
+	}
+
+	/* Optional: Add some extra styling for when a submenu item is hovered */
+	.submenu li a:hover {
+		background: var(--primary);
+	}
+</style>

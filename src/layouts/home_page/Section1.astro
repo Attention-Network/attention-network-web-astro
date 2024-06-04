@@ -1,0 +1,154 @@
+---
+import Button from '../../components/Button.astro';
+import Dialog from '../../components/Dialog.astro';
+import { dialogIntents } from '../../states';
+import Input from '../../components/Input.astro';
+import { fade } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<section class='landing-section'>
+	<div class='flex-container'>
+		<div class='item-1'>
+			<h1>
+				We're building the best talent hub. <span style='color:var(--primary);'
+					>In Dhaka.</span
+				>
+			</h1>
+			<p>Build. Connect. Share.</p>
+			<a href='/community-studio'
+				><Button
+					className='dialog-button'
+					text='Community App Waitlist'
+					slot='open-dialog'
+					id='dialog-1'
+				/></a
+			>
+		</div>
+		<div class='item 2'>
+			<img
+				src='/landing_image.jpeg'
+				class='landing-picture'
+				alt='landing'
+			/>
+		</div>
+	</div>
+</section>
+<ViewTransitions />
+
+<style>
+	.landing-section {
+		padding: 10px 50px 50px 1em;
+		background-color: white;
+		z-index: 2;
+	}
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	p {
+		font-family: 'b1';
+		font-weight: light;
+	}
+
+	.item-1 {
+		flex: 2;
+		margin-bottom: 10px;
+	}
+
+	.item-2 {
+		flex: 1;
+	}
+
+	img {
+		max-height: 600px;
+	}
+
+	.landing-section #dialog-title {
+		color: black;
+		font-family: 'Futura light';
+		margin-bottom: 50px;
+		width: 250px;
+	}
+	button:hover {
+		cursor: pointer;
+	}
+
+	@media (min-width: 800px) {
+		.landing-section {
+			padding: 50px 0 30px 0;
+			margin: 0;
+			/* max-width: 1100px; */
+			position: relative;
+			left: 50%;
+			transform: translate(-50%);
+			display: flex;
+			justify-content: center;
+			z-index: 0;
+		}
+		button {
+			z-index: 4;
+		}
+		.flex-container {
+			flex-direction: row;
+			justify-content: space-between;
+			max-width: 1100px;
+		}
+		.landing-section img {
+			width: 450px;
+		}
+		.item-1 {
+			margin-right: 150px;
+		}
+
+		.landing-section .btn {
+			display: flex;
+			margin: auto;
+		}
+
+		.landing-section .item-1 {
+			width: 100%;
+		}
+		.landing-section #dialog-title {
+			width: 800px;
+		}
+	}
+</style>
+<script>
+	// import contentful from '../../lib/contentful.js';
+
+	// const cmsClient = new contentful(
+	// 	'CFPAT-Fv8bCvvESWMdNndVTO3yP-73aO_RfUfHEl5GoDxrKj8',
+	// 	'noepe1fl3llv'
+	// );
+	const fileURL =
+		'https://assets.ctfassets.net/noepe1fl3llv/679VJyNJsKfZPLr991hBKz/cb20d72f6bae21b265bc87dda19e7548/Personal_Balance_Sheet.xlsx';
+	function openDialog() {
+		document.querySelector('#first-dialog')?.showModal();
+	}
+	function closeDialog() {
+		document.querySelector('#first-dialog')?.close();
+	}
+	let elements = document.querySelectorAll('.dialog-button');
+	// elements.forEach((element) => {
+	// 	if (element.textContent == '> Download Free') {
+	// 		element.addEventListener('click', openDialog);
+	// 	}
+	// });
+
+	// let closeButtons = document.querySelectorAll('.close-button');
+	// closeButtons[0].addEventListener('click', closeDialog);
+
+	// const form = document.getElementById('first-dialog-form');
+	// form?.addEventListener('submit', async function (e) {
+	// 	e.preventDefault();
+	// 	const userInput = document.getElementById('email')?.value;
+	// 	// console.log(userInput);
+	// 	await cmsClient.downloadFile(userInput, fileURL);
+	// 	const newHTMLContent =
+	// 		'<p>Congratulations on your first step towards financial freedom! 🎉</p>';
+	// 	form.innerHTML = newHTMLContent;
+	// });
+</script>
