@@ -11,14 +11,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
 <Layout>
   <main>
     <Hero />
-    <!-- <Test /> -->
-    <h1 style='text-align: center'>Book a Day Pass</h1>
-    <div
-      class='calendly-inline-widget'
-      data-url='https://calendly.com/theattentionnetwork-daypass/day-pass?primary_color=ee4845'
-      style='min-width:320px;height:700px;'
-    >
-    </div>
+    <section class='section'>
+      <h1 style='text-align: center'>Book a Day Pass</h1>
+      <div
+        class='calendly-inline-widget'
+        data-url='https://calendly.com/theattentionnetwork-daypass/day-pass?primary_color=ee4845'
+        style='min-width:320px;height:700px;'
+      >
+      </div>
+    </section>
     <script
       type='text/javascript'
       src='https://assets.calendly.com/assets/external/widget.js'
@@ -27,6 +28,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
 </Layout>
 
 <style>
+  .section {
+    background: white;
+  }
+
+  .calendly-inline-widget {
+  }
+
   main {
     position: relative;
     /* z-index: -1; */
