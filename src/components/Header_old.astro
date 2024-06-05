@@ -1,0 +1,143 @@
+---
+import HeaderLink from "./HeaderLink.astro"
+import { SITE_TITLE } from "../consts"
+---
+
+<header>
+  <nav>
+    <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
+    <a class='logo' href='/'><img src='/logo.png' /></a>
+    <!-- <img src="/wg-logo.png" /> -->
+    <div class='internal-links'>
+      <!-- <HeaderLink href="/">Home</HeaderLink> -->
+      <HeaderLink href='/about-us'>About us</HeaderLink>
+      <!-- <HeaderLink
+				more='True'
+				style='padding-right: 5px'
+			>
+				Community
+			</HeaderLink> -->
+    </div>
+    <div class='social-links'>
+      <a href='https://facebook.com/wisergates' target='_blank'>
+        <span class='sr-only'>Follow WiserGates on Facebook</span>
+
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='256'
+          height='256'
+          viewBox='0 0 256 256'
+          ><path
+            fill='var(--black)'
+            d='M256 128C256 57.308 198.692 0 128 0C57.308 0 0 57.307 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.347-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.958 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445'
+          ></path><path
+            fill='white'
+            d='m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A128.959 128.959 0 0 0 128 256a128.9 128.9 0 0 0 20-1.555V165h29.825'
+          ></path></svg
+        >
+      </a>
+      <a href='https://youtube.com/wisergates' target='_blank'>
+        <span class='sr-only'>Follow WiserGates on YouTube</span>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='16'
+          height='16'
+          viewBox='0 0 16 16'
+          ><path
+            fill='var(--black)'
+            d='M15.841 4.8s-.156-1.103-.637-1.587c-.609-.637-1.291-.641-1.603-.678c-2.237-.163-5.597-.163-5.597-.163h-.006s-3.359 0-5.597.163c-.313.038-.994.041-1.603.678C.317 3.697.164 4.8.164 4.8S.005 6.094.005 7.391v1.213c0 1.294.159 2.591.159 2.591s.156 1.103.634 1.588c.609.637 1.409.616 1.766.684c1.281.122 5.441.159 5.441.159s3.363-.006 5.6-.166c.313-.037.994-.041 1.603-.678c.481-.484.637-1.588.637-1.588s.159-1.294.159-2.591V7.39c-.003-1.294-.162-2.591-.162-2.591zm-9.494 5.275V5.578l4.322 2.256l-4.322 2.241z'
+          ></path></svg
+        >
+      </a>
+      <a href='https://instagram.com/wisergates' target='_blank'>
+        <span class='sr-only'>Follow WiserGates on Instagram</span>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          ><path
+            fill='var(--black)'
+            d='M12 9.52A2.48 2.48 0 1 0 14.48 12A2.48 2.48 0 0 0 12 9.52Zm9.93-2.45a6.53 6.53 0 0 0-.42-2.26a4 4 0 0 0-2.32-2.32a6.53 6.53 0 0 0-2.26-.42C15.64 2 15.26 2 12 2s-3.64 0-4.93.07a6.53 6.53 0 0 0-2.26.42a4 4 0 0 0-2.32 2.32a6.53 6.53 0 0 0-.42 2.26C2 8.36 2 8.74 2 12s0 3.64.07 4.93a6.86 6.86 0 0 0 .42 2.27a3.94 3.94 0 0 0 .91 1.4a3.89 3.89 0 0 0 1.41.91a6.53 6.53 0 0 0 2.26.42C8.36 22 8.74 22 12 22s3.64 0 4.93-.07a6.53 6.53 0 0 0 2.26-.42a3.89 3.89 0 0 0 1.41-.91a3.94 3.94 0 0 0 .91-1.4a6.6 6.6 0 0 0 .42-2.27C22 15.64 22 15.26 22 12s0-3.64-.07-4.93Zm-2.54 8a5.73 5.73 0 0 1-.39 1.8A3.86 3.86 0 0 1 16.87 19a5.73 5.73 0 0 1-1.81.35H8.94A5.73 5.73 0 0 1 7.13 19a3.51 3.51 0 0 1-1.31-.86A3.51 3.51 0 0 1 5 16.87a5.49 5.49 0 0 1-.34-1.81V8.94A5.49 5.49 0 0 1 5 7.13a3.51 3.51 0 0 1 .86-1.31A3.59 3.59 0 0 1 7.13 5a5.73 5.73 0 0 1 1.81-.35h6.12a5.73 5.73 0 0 1 1.81.35a3.51 3.51 0 0 1 1.31.86A3.51 3.51 0 0 1 19 7.13a5.73 5.73 0 0 1 .35 1.81V12c0 2.06.07 2.27.04 3.06Zm-1.6-7.44a2.38 2.38 0 0 0-1.41-1.41A4 4 0 0 0 15 6H9a4 4 0 0 0-1.38.26a2.38 2.38 0 0 0-1.41 1.36A4.27 4.27 0 0 0 6 9v6a4.27 4.27 0 0 0 .26 1.38a2.38 2.38 0 0 0 1.41 1.41a4.27 4.27 0 0 0 1.33.26h6a4 4 0 0 0 1.38-.26a2.38 2.38 0 0 0 1.41-1.41a4 4 0 0 0 .26-1.38V9a3.78 3.78 0 0 0-.26-1.38ZM12 15.82A3.81 3.81 0 0 1 8.19 12A3.82 3.82 0 1 1 12 15.82Zm4-6.89a.9.9 0 0 1 0-1.79a.9.9 0 0 1 0 1.79Z'
+          ></path></svg
+        >
+      </a>
+    </div>
+  </nav>
+</header>
+<style>
+  header {
+    margin: 0;
+    padding: 0 1em;
+    background: white;
+    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+    font-weight: lighter;
+    /* margin-bottom: 50px; */
+    z-index: 2;
+  }
+  img {
+    height: 30px;
+    margin-top: 10px;
+  }
+  @media (min-width: 800px) {
+    header {
+      padding: 0 80px;
+      margin-bottom: 0;
+    }
+    img {
+      height: 50px;
+      margin-top: 10px;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      /* color: black; */
+    }
+    svg:hover {
+      fill: var(--accent);
+    }
+  }
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    max-width: 1100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+  }
+  nav a {
+    padding: 0.4em 0.8em;
+    color: var(--black);
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    z-index: 3;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: var(--accent);
+  }
+  .social-links,
+  .social-links a {
+    display: flex;
+  }
+  nav a:hover {
+    color: var(--accent);
+  }
+  @media (max-width: 720px) {
+    .social-links {
+      display: none;
+    }
+  }
+</style>
