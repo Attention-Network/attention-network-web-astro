@@ -79,6 +79,8 @@
   }
 
   .submenu {
+    width: 200px;
+    min-width: max-content;
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -96,6 +98,7 @@
   .submenu li a {
     padding: 10px;
     color: white;
+    transition: all 0.3s;
   }
 
   .menu-item:hover > .submenu {
@@ -109,6 +112,6 @@
 
   /* Optional: Add some extra styling for when a submenu item is hovered */
   .submenu li a:hover {
-    background: var(--primary);
+    background: rgba(0, 0, 0, 0.5);
   }
 </style>
