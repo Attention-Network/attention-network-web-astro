@@ -2,7 +2,7 @@
 
 ---
 
-<header>
+<header class='header'>
   <nav class='navbar'>
     <a class='logo' href='/'><img src='/logo.png' /></a>
     <div class='internal-links'>
@@ -31,11 +31,12 @@
   </nav>
 </header>
 <style>
-  header {
+  .header {
+    background: white;
     position: relative;
     margin: 0;
     padding: 0 1em;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+    box-shadow: 0 2px 8px rgba(var(--black), 10%);
     font-weight: lighter;
     /* margin-bottom: 50px; */
     padding: 20px 0;
@@ -73,7 +74,7 @@
   .menu-item a {
     display: block;
     padding: 10px;
-    color: black;
+    color: var(--primary);
     text-decoration: none;
   }
 
