@@ -16,7 +16,12 @@
             <li><a href='#'>Events</a></li>
             <li><a href='#'>Careers</a></li>
             <li><a href='#'>Partners</a></li>
-            <li><a href='#'>Members (coming soon)</a></li>
+            <li>
+              <a href='#'
+                >Members
+                <span class='tag'>coming soon</span>
+              </a>
+            </li>
           </ul>
         </li>
         <li class='menu-item'>
@@ -79,7 +84,7 @@
   }
 
   .submenu {
-    width: 200px;
+    width: 150px;
     min-width: max-content;
     opacity: 0;
     visibility: hidden;
@@ -93,6 +98,20 @@
     transition:
       opacity 0.5s,
       visibility 0.5s;
+  }
+
+  .submenu li a {
+    position: relative;
+  }
+
+  .tag {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 7px;
+    border-radius: 7px;
+    font-size: 10px;
   }
 
   .submenu li a {
