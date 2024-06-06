@@ -6,24 +6,15 @@ import Hero from "../layouts/home_page/Hero.astro"
 import Test from "../layouts/home_page/Test.astro"
 import Footer from "../components/Footer.astro"
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
+import SectionDayPass from "./components/SectionDayPass.astro"
+import SectionEvents from "./components/SectionEvents.astro"
 ---
 
 <Layout>
   <main>
     <Hero />
-    <section class='section'>
-      <h1 style='text-align: center'>Book a Day Pass</h1>
-      <div
-        class='calendly-inline-widget'
-        data-url='https://calendly.com/theattentionnetwork-daypass/day-pass?primary_color=ee4845'
-        style='min-width:320px;height:700px;'
-      >
-      </div>
-    </section>
-    <script
-      type='text/javascript'
-      src='https://assets.calendly.com/assets/external/widget.js'
-      async></script>
+    <SectionEvents />
+    <SectionDayPass />
   </main>
 </Layout>
 

@@ -114,6 +114,23 @@ p {
 .prose p {
   margin-bottom: 2em;
 }
+
+.section {
+  background: white;
+}
+
+.u-primary {
+  color: var(--primary);
+
+}
+
+.section__wrap {
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 textarea {
   width: 100%;
   font-size: 16px;
