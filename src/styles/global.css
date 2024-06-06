@@ -164,6 +164,16 @@ input::placeholder {
   background: #d13f3f;
 }
 
+.info {
+  background: rgba(175, 220, 123, 0.3);
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  color: rgb(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
 .prose p {
   margin-bottom: 2em;
 }

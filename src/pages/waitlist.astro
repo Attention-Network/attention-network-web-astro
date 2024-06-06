@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import WaitlistForm from './components/WaitlistForm.tsx'
 ---
 
 <Layout>
@@ -9,36 +10,7 @@ import Layout from "../layouts/Layout.astro"
         <h1 class="heading u-primary">Community App Waitlist</h1>
         <p class="subheading">Be the first to use our community app.</p>
         <p>Enter your details below:</p>
-
-        <form action="" class="form">
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-          />
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-          />
-          <label for="phone">Phone:</label>
-          <input
-            type="tel"
-            name="phone"
-            id="phone"
-            placeholder="Phone"
-            required
-          />
-          <button type="submit" value="Submit" class="btn btn--primary">
-            Submit
-          </button>
-        </form>
+        <WaitlistForm client:load />
       </header>
       <main></main>
     </div>
