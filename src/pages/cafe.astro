@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout>
+  <section class="section">
+    <div class="section__wrap">
+      <header>
+        <h1 class="heading u-primary">Café</h1>
+        <p class="subheading">
+          Bringing people together, one cup of coffee and bite of snack at a
+          time, at our community cafe.
+        </p>
+      </header>
+
+      <main class="gallery">
+        <div class="image">
+          <img src="/images/cafe/cafe1.jpg" alt="Day Pass" />
+        </div>
+        <div class="image">
+          <img src="/images/cafe/cafe2.jpg" alt="Day Pass" />
+        </div>
+        <div class="image">
+          <img src="/images/cafe/cafe3.jpg" alt="Day Pass" />
+        </div>
+      </main>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 1rem;
+  }
+
+  .image {
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  .image:hover {
+  }
+
+  .image img {
+    filter: brightness(0.7);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 4/3;
+    transition: all 0.2s ease-in;
+  }
+
+  .image img:hover {
+    filter: brightness(1);
+    transform: scale(1.1);
+  }
+</style>
