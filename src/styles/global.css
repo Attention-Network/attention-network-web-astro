@@ -103,6 +103,7 @@ b {
 }
 a {
   color: var(--accent);
+  text-decoration: none;
 }
 a:hover {
   color: var(--accent);
@@ -111,6 +112,58 @@ p {
   font-size: 1.2em;
   margin-bottom: 1em;
 }
+/* Input styles */
+
+/* reset input and buttons */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid rgb(var(--gray-light));
+  border-radius: 4px;
+  background: white;
+  color: rgb(var(--black));
+  margin-bottom: 1em;
+  display: block;
+}
+
+input,
+textarea {
+  width: 50%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+.btn {
+  width: 250px;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.btn--primary:hover {
+  background: #d13f3f;
+}
+
 .prose p {
   margin-bottom: 2em;
 }
