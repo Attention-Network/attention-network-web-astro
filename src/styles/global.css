@@ -121,14 +121,23 @@ p {
 
 .u-primary {
   color: var(--primary);
-
 }
 
 .section__wrap {
   max-width: 1000px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 40px;
+}
+
+/* single page styles */
+.heading {
+}
+
+.subheading {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 1em;
 }
 
 textarea {
