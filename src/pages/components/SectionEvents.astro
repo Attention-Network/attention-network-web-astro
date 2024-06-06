@@ -1,0 +1,71 @@
+---
+---
+
+<section class="section">
+  <div class="section__wrap">
+    <header class="header">
+      <h1>Upcoming</h1>
+      <h1 class="u-primary">Events</h1>
+    </header>
+    <div class="events__carousel">
+      <div class="carousel">
+        <img src="/images/events/wondar1.jpg" alt="wondar" />
+      </div>
+      <div class="carousel middle__carousel">
+        <img src="/images/events/azamkhan.jpg" alt="wondar" />
+      </div>
+      <div class="carousel">
+        <img src="/images/events/speednetworking.jpg" alt="speed networking" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .events__carousel {
+    display: flex;
+    position: relative;
+    gap: 100px;
+    padding: 40px 0;
+  }
+
+  .carousel {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    zoom: ;
+  }
+
+  .carousel:hover {
+    z-index: 1;
+    transform: scale(1.05);
+  }
+
+  .carousel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  .middle__carousel {
+    position: absolute;
+    margin: 0 20px;
+    width: 600px;
+    height: auto;
+    left: 20%;
+    top: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+</style>
